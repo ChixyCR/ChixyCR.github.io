@@ -5,11 +5,11 @@
   <meta charset="UTF-8" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="">
-<meta name="description" content="我们的生命被琐碎消耗至尽。\n Ourlife is frittered away by detail.">
-<meta name="theme-color" content="">
+<meta name="keywords" content="Gridea静态个人博客">
+<meta name="description" content="">
+<meta name="theme-color" content="#000">
 <title>Chixy</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1646407833793">
+<link rel="shortcut icon" href="/favicon.ico?v=1646407934828">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/pisces.css">
 
@@ -18,7 +18,7 @@
   href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
   rel="stylesheet" type="text/css">
 
-<link href="/media/hljs/styles/github.css"
+<link href="/media/hljs/styles/androidstudio.css"
   rel="stylesheet">
 
 <script src="/media/hljs/highlight.js"></script>
@@ -54,11 +54,15 @@
           
         </div>
         
+          <p class="subtitle">精于心，简于形</p>
+        
       </div>
       <nav class="site-nav" id="site_nav">
         <ul id="nav_ul">
           
             
+            
+              
             
             <li class="nav-item nav-item-active">
               
@@ -71,6 +75,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -81,6 +87,8 @@
             </li>
           
             
+            
+              
             
             <li class="nav-item ">
               
@@ -93,6 +101,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -102,6 +112,16 @@
               
             </li>
           
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
           
         </ul>
       </nav>
@@ -141,7 +161,18 @@
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
-    <p class="site-author-name"></p>
+    <p class="site-author-name">Chixy</p>
+    
+    <div class="site-description right-motion">
+      
+      
+      
+        <p>我们的生命被琐碎消耗至尽。</p>
+      
+        <p> Ourlife is frittered away by detail.</p>
+      
+      
+    </div>
     
   </div>
   <div class="sidebar-item side-item-stat right-motion">
@@ -173,14 +204,12 @@
   
   
 
-  
-
 
 </div>
 </div>
 <script>
   let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = '';
+  let scheme = 'pisces';
   let sidebarWrapper = document.querySelector('.sidebar-wrapper');
   if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
     document.addEventListener('scroll', function(e) {
@@ -286,14 +315,7 @@
     
   </div>
   
-    <div class="bg-img">
-      <img src="" />
-    </div>
   
-  
-  
-    
-
   
 </div>
 <script>
@@ -427,7 +449,7 @@
   }
 
   // 链接跳转
-  let newWindow = ''
+  let newWindow = 'false'
   if (newWindow === 'true') {
     let links = document.querySelectorAll('.post-body a')
     links.forEach(item => {
