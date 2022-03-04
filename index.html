@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="">
+<meta name="description" content="我们的生命被琐碎消耗至尽。
+Ourlife is frittered away by detail.">
+<meta name="theme-color" content="">
+<title>Chixy</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1646407392576">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/media/css/pisces.css">
+
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/github.css"
+  rel="stylesheet">
+
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Chixy</span>
+            </a>  
+          
+        </div>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+            <li class="nav-item nav-item-active">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about/" target="_self">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout pisces ">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name"></p>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item" style="border-top: 1px dotted #ccc; margin-top: 10px;">
+      </div>
+    
+  
+  
+
+  
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = '';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box pisces">
+          <section class="section bg-color posts-expand slide-down-in">
+            
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://ChixyCR.github.io/post/Create_blog_with_gridea/">
+      使用Gridea创建个人博客
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2022-03-04</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>3分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>689<span class="pc-show">字数</span></span>
+    </span>
+    
+  </div>
+</header>
+      <div class="post-body">
+        
+        
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn" href="https://ChixyCR.github.io/post/Create_blog_with_gridea/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+  
+            
+            
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+    
+      
+        <li class="pagination-li pagination-active">
+            <a href="/page/../">
+              1
+            </a>
+        </li>
+      
+    
+    
+  </ul>
+</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+    </div>
+    <div class="poweredby">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+  </footer>
+  
+  
+  <div class="pisces back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+    <div class="bg-img">
+      <img src="" />
+    </div>
+  
+  
+  
+    
+
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  
+  let hasCacu = false;
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+  
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function() {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, transitionDir,{ });
+          }
+        })
+        window.Velocity(viewport, openProp,{
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp ,{
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = ''
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target","_blank");
+      }
+    })
+  }
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+</script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
+</script>
+  </div>
+</body>
+<input hidden id="copy" />
+<script>
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        console.log('复制操作频率过高');
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+</script>
+<script src="/media/js/motion.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 500
+  });
+</script>
+
+<!-- <div class="search-mask" id="search_mask">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input type="text" placeholder="搜索">
+      </div>
+      <i class="fa fa-times-circle"></i>
+    </div>
+    <div class="result">
+      
+      <div class="item">
+        <a class="result-title" href="https://ChixyCR.github.io/post/Create_blog_with_gridea/"" data-c="
+          &lt;p&gt;#😑前言：&lt;br&gt;
+个人博客发展到今天，似乎越来越少的人还在使用。我从最初的WordPress到后面的Typecho，又用到Hexo，到现在的Gridea。从以前一年好几百的服务器费用，到现在只需要续费个域名。降低成本的同时，也方便了写作。如果你也不想花费大量的时间去配置环境，去修改代码，并且想拥有一个属于自己的域名的个人博客，那么Gridea将会是你最棒的选择。&lt;/p&gt;
+&lt;p&gt;#😉环境准备&lt;br&gt;
+1、在使用Gridea之前，请确保你拥有一个完全通畅的网络能访问GitHub，然后再开始下面的步骤。&lt;br&gt;
+2、首先从Gridea官网 下载适配你操作系统的版本。双击打开，安装。&lt;br&gt;
+3、在GitHub上创建你自己的账号。&lt;/p&gt;
+&lt;p&gt;#😃开始搭建&lt;br&gt;
+首先在GitHub上创建一个仓库，点击new选项就可以&lt;br&gt;
+&lt;img src=&#34;https://ChixyCR.github.io/post-images/1646404548373.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+在Repository name中输入 用户名.github.io（用户名就是你GitHub账号的名称）&lt;br&gt;
+然后点击 Create repository，这样你的仓库就创建好啦。&lt;/p&gt;
+&lt;p&gt;然后要创建一个仓库Token，点击https://github.com/settings/tokens&lt;br&gt;
+随后，点击Generate Token ，就创建完成了。（先不要着急关这个页面，后续还有用）&lt;/p&gt;
+&lt;p&gt;打开你已经安装好的Gridea应用程序，点击侧边栏的远程按钮。&lt;br&gt;
+&lt;img src=&#34;https://ChixyCR.github.io/post-images/1646404592984.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+域名填写为 用户名.github.io （注意大小写)&lt;br&gt;
+仓库名称 用户名.github.io&lt;br&gt;
+分支 master&lt;br&gt;
+仓库用户名 用户名&lt;br&gt;
+邮箱即为你注册GitHub的邮箱&lt;br&gt;
+令牌填写为创建完Token后页面上面的那一串字符&lt;br&gt;
+CNAME 暂时不填&lt;/p&gt;
+&lt;p&gt;这样基本设置就完成啦。&lt;br&gt;
+点击预览，你就会在你的本地看见你已经搭建完成的博客。点击同步，你就可以在 用户名.github.io 这个网址看见你的博客啦。&lt;/p&gt;
+&lt;p&gt;#😋更改域名&lt;br&gt;
+更改域名的前提是，你已经有了一个域名。没有的话那你得去阿里云，或者腾讯云等等去购买一个域名。&lt;br&gt;
+然后在域名解析中添加一条CNAME解析，主机记录就是你域名的前缀，一般可以写www，或者根据你的喜好随意更改。解析记录值填写为 用户名.github.io 填写完成后，到GitHub的那个仓库去，点击上面的setting按钮，在点击左边的Pages标签 在Custom domain填写你刚刚解析的域名，然后把下面的Enforce Https 勾上，选择Sava就行了。最后回到Gridea客户端，在远程选项卡，将刚刚没填写的CNAME填写为你的域名，点击同步。即可大功告成。&lt;img src=&#34;https://ChixyCR.github.io/post-images/1646404612897.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这样就可以尽情的享受Gridea的便捷啦。&lt;/p&gt;
+">使用Gridea创建个人博客</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://ChixyCR.github.io/post/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;p&gt;很久以前，当我还是个小学生的时候，我就有了做一个自己网站的想法，多年来，从WordPress，换到Typecho，又换到Hexo，最终选择了Gridea来制作自己的网站。做网站也不求名不求利，为的只是在茫茫互联网上留下一点自己的足迹，留下点自己的经历，让我这经历能帮助一些正在经历的人。&lt;/p&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+&lt;p&gt;Telegram: https://t.me/ChixyCR&lt;/p&gt;
+">关于</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<script>
+  // var escape = "[{&#34;content&#34;:&#34;&lt;p&gt;#😑前言：&lt;br&gt;\n个人博客发展到今天，似乎越来越少的人还在使用。我从最初的WordPress到后面的Typecho，又用到Hexo，到现在的Gridea。从以前一年好几百的服务器费用，到现在只需要续费个域名。降低成本的同时，也方便了写作。如果你也不想花费大量的时间去配置环境，去修改代码，并且想拥有一个属于自己的域名的个人博客，那么Gridea将会是你最棒的选择。&lt;/p&gt;\n&lt;p&gt;#😉环境准备&lt;br&gt;\n1、在使用Gridea之前，请确保你拥有一个完全通畅的网络能访问GitHub，然后再开始下面的步骤。&lt;br&gt;\n2、首先从Gridea官网 下载适配你操作系统的版本。双击打开，安装。&lt;br&gt;\n3、在GitHub上创建你自己的账号。&lt;/p&gt;\n&lt;p&gt;#😃开始搭建&lt;br&gt;\n首先在GitHub上创建一个仓库，点击new选项就可以&lt;br&gt;\n&lt;img src=\&#34;https://ChixyCR.github.io/post-images/1646404548373.png\&#34; alt=\&#34;\&#34; loading=\&#34;lazy\&#34;&gt;&lt;br&gt;\n在Repository name中输入 用户名.github.io（用户名就是你GitHub账号的名称）&lt;br&gt;\n然后点击 Create repository，这样你的仓库就创建好啦。&lt;/p&gt;\n&lt;p&gt;然后要创建一个仓库Token，点击https://github.com/settings/tokens&lt;br&gt;\n随后，点击Generate Token ，就创建完成了。（先不要着急关这个页面，后续还有用）&lt;/p&gt;\n&lt;p&gt;打开你已经安装好的Gridea应用程序，点击侧边栏的远程按钮。&lt;br&gt;\n&lt;img src=\&#34;https://ChixyCR.github.io/post-images/1646404592984.png\&#34; alt=\&#34;\&#34; loading=\&#34;lazy\&#34;&gt;&lt;br&gt;\n域名填写为 用户名.github.io （注意大小写)&lt;br&gt;\n仓库名称 用户名.github.io&lt;br&gt;\n分支 master&lt;br&gt;\n仓库用户名 用户名&lt;br&gt;\n邮箱即为你注册GitHub的邮箱&lt;br&gt;\n令牌填写为创建完Token后页面上面的那一串字符&lt;br&gt;\nCNAME 暂时不填&lt;/p&gt;\n&lt;p&gt;这样基本设置就完成啦。&lt;br&gt;\n点击预览，你就会在你的本地看见你已经搭建完成的博客。点击同步，你就可以在 用户名.github.io 这个网址看见你的博客啦。&lt;/p&gt;\n&lt;p&gt;#😋更改域名&lt;br&gt;\n更改域名的前提是，你已经有了一个域名。没有的话那你得去阿里云，或者腾讯云等等去购买一个域名。&lt;br&gt;\n然后在域名解析中添加一条CNAME解析，主机记录就是你域名的前缀，一般可以写www，或者根据你的喜好随意更改。解析记录值填写为 用户名.github.io 填写完成后，到GitHub的那个仓库去，点击上面的setting按钮，在点击左边的Pages标签 在Custom domain填写你刚刚解析的域名，然后把下面的Enforce Https 勾上，选择Sava就行了。最后回到Gridea客户端，在远程选项卡，将刚刚没填写的CNAME填写为你的域名，点击同步。即可大功告成。&lt;img src=\&#34;https://ChixyCR.github.io/post-images/1646404612897.png\&#34; alt=\&#34;\&#34; loading=\&#34;lazy\&#34;&gt;&lt;/p&gt;\n&lt;p&gt;这样就可以尽情的享受Gridea的便捷啦。&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;Create_blog_with_gridea&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;使用Gridea创建个人博客&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2022-03-04 22:34:51&#34;,&#34;dateFormat&#34;:&#34;2022-03-04&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://ChixyCR.github.io/post/Create_blog_with_gridea/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;3 min read&#34;,&#34;time&#34;:147000,&#34;words&#34;:689,&#34;minutes&#34;:3},&#34;description&#34;:&#34;#😑前言：\n个人博客发展到今天，似乎越来越少的人还在使用。我从最初的WordPress到后面的Typecho，又用到Hexo，到现在的Gridea。从以前一年好几百的服务器费用，到现在只需要续费个域名。降低成本的同时，也方便了写作。如果你...&#34;,&#34;toc&#34;:&#34;&#34;},{&#34;content&#34;:&#34;&lt;blockquote&gt;\n&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h2 id=\&#34;关于本站\&#34;&gt;🏠 关于本站&lt;/h2&gt;\n&lt;p&gt;很久以前，当我还是个小学生的时候，我就有了做一个自己网站的想法，多年来，从WordPress，换到Typecho，又换到Hexo，最终选择了Gridea来制作自己的网站。做网站也不求名不求利，为的只是在茫茫互联网上留下一点自己的足迹，留下点自己的经历，让我这经历能帮助一些正在经历的人。&lt;/p&gt;\n&lt;h2 id=\&#34;联系我呀\&#34;&gt;📬 联系我呀&lt;/h2&gt;\n&lt;p&gt;Telegram: https://t.me/ChixyCR&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;about&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;关于&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2019-01-25 19:09:48&#34;,&#34;dateFormat&#34;:&#34;2019-01-25&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://ChixyCR.github.io/post/about/&#34;,&#34;hideInList&#34;:true,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;1 min read&#34;,&#34;time&#34;:28000,&#34;words&#34;:137,&#34;minutes&#34;:1},&#34;description&#34;:&#34;\n欢迎来到我的小站呀，很高兴遇见你！🤝\n\n🏠 关于本站\n很久以前，当我还是个小学生的时候，我就有了做一个自己网站的想法，多年来，从WordPress，换到Typecho，又换到Hexo，最终选择了Gridea来制作自己的网站。做网站也不...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99\&#34;&gt;🏠 关于本站&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80\&#34;&gt;📬 联系我呀&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;}]";
+  // var json = escape.substr(1, escape.length - 2);
+  // var datas = json.split(',');
+  // for (let i=0; i < datas.length; i++) {
+  //   let item = datas[i];
+  //   let attrs = item.split('34;:&#34')
+  //   debugger
+  //   console.log(datas[i])
+  // }
+  let escapeMap = new Map();
+  escapeMap.set('&#34;', '"');
+  escapeMap.set('&gt;', '>');
+  escapeMap.set('&#39;', "'");
+  escapeMap.set('&lt;', '<');
+  escapeMap.set('&quot;', '"');
+  escapeMap.set('&amp;', '&');
+</script> -->
+
+
+
+</html>

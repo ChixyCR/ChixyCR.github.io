@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ChixyCR.github.io</id>
+    <title>Chixy</title>
+    <updated>2022-03-04T15:23:17.023Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://ChixyCR.github.io"/>
+    <link rel="self" href="https://ChixyCR.github.io/atom.xml"/>
+    <subtitle>我们的生命被琐碎消耗至尽。
+Ourlife is frittered away by detail.</subtitle>
+    <logo>https://ChixyCR.github.io/images/avatar.png</logo>
+    <icon>https://ChixyCR.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, Chixy</rights>
+    <entry>
+        <title type="html"><![CDATA[使用Gridea创建个人博客]]></title>
+        <id>https://ChixyCR.github.io/post/Create_blog_with_gridea/</id>
+        <link href="https://ChixyCR.github.io/post/Create_blog_with_gridea/">
+        </link>
+        <updated>2022-03-04T14:34:51.000Z</updated>
+        <content type="html"><![CDATA[<p>#😑前言：<br>
+个人博客发展到今天，似乎越来越少的人还在使用。我从最初的WordPress到后面的Typecho，又用到Hexo，到现在的Gridea。从以前一年好几百的服务器费用，到现在只需要续费个域名。降低成本的同时，也方便了写作。如果你也不想花费大量的时间去配置环境，去修改代码，并且想拥有一个属于自己的域名的个人博客，那么Gridea将会是你最棒的选择。</p>
+<p>#😉环境准备<br>
+1、在使用Gridea之前，请确保你拥有一个完全通畅的网络能访问GitHub，然后再开始下面的步骤。<br>
+2、首先从Gridea官网 下载适配你操作系统的版本。双击打开，安装。<br>
+3、在GitHub上创建你自己的账号。</p>
+<p>#😃开始搭建<br>
+首先在GitHub上创建一个仓库，点击new选项就可以<br>
+<img src="https://ChixyCR.github.io/post-images/1646404548373.png" alt="" loading="lazy"><br>
+在Repository name中输入 用户名.github.io（用户名就是你GitHub账号的名称）<br>
+然后点击 Create repository，这样你的仓库就创建好啦。</p>
+<p>然后要创建一个仓库Token，点击https://github.com/settings/tokens<br>
+随后，点击Generate Token ，就创建完成了。（先不要着急关这个页面，后续还有用）</p>
+<p>打开你已经安装好的Gridea应用程序，点击侧边栏的远程按钮。<br>
+<img src="https://ChixyCR.github.io/post-images/1646404592984.png" alt="" loading="lazy"><br>
+域名填写为 用户名.github.io （注意大小写)<br>
+仓库名称 用户名.github.io<br>
+分支 master<br>
+仓库用户名 用户名<br>
+邮箱即为你注册GitHub的邮箱<br>
+令牌填写为创建完Token后页面上面的那一串字符<br>
+CNAME 暂时不填</p>
+<p>这样基本设置就完成啦。<br>
+点击预览，你就会在你的本地看见你已经搭建完成的博客。点击同步，你就可以在 用户名.github.io 这个网址看见你的博客啦。</p>
+<p>#😋更改域名<br>
+更改域名的前提是，你已经有了一个域名。没有的话那你得去阿里云，或者腾讯云等等去购买一个域名。<br>
+然后在域名解析中添加一条CNAME解析，主机记录就是你域名的前缀，一般可以写www，或者根据你的喜好随意更改。解析记录值填写为 用户名.github.io 填写完成后，到GitHub的那个仓库去，点击上面的setting按钮，在点击左边的Pages标签 在Custom domain填写你刚刚解析的域名，然后把下面的Enforce Https 勾上，选择Sava就行了。最后回到Gridea客户端，在远程选项卡，将刚刚没填写的CNAME填写为你的域名，点击同步。即可大功告成。<img src="https://ChixyCR.github.io/post-images/1646404612897.png" alt="" loading="lazy"></p>
+<p>这样就可以尽情的享受Gridea的便捷啦。</p>
+]]></content>
+    </entry>
+</feed>
