@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ChixyCR.github.io</id>
     <title>Chixy</title>
-    <updated>2022-03-04T15:32:17.572Z</updated>
+    <updated>2022-03-04T15:35:39.283Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ChixyCR.github.io"/>
     <link rel="self" href="https://ChixyCR.github.io/atom.xml"/>
@@ -15,8 +15,12 @@
         <link href="https://ChixyCR.github.io/post/Create_blog_with_gridea/">
         </link>
         <updated>2022-03-04T14:34:51.000Z</updated>
+        <summary type="html"><![CDATA[<p>#😑前言：<br>
+个人博客发展到今天，似乎越来越少的人还在使用。我从最初的WordPress到后面的Typecho，又用到Hexo，到现在的Gridea。从以前一年好几百的服务器费用，到现在只需要续费个域名。降低成本的同时，也方便了写作。如果你也不想花费大量的时间去配置环境，去修改代码，并且想拥有一个属于自己的域名的个人博客，那么Gridea将会是你最棒的选择。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>#😑前言：<br>
 个人博客发展到今天，似乎越来越少的人还在使用。我从最初的WordPress到后面的Typecho，又用到Hexo，到现在的Gridea。从以前一年好几百的服务器费用，到现在只需要续费个域名。降低成本的同时，也方便了写作。如果你也不想花费大量的时间去配置环境，去修改代码，并且想拥有一个属于自己的域名的个人博客，那么Gridea将会是你最棒的选择。</p>
+<!-- more -->
 <p>#😉环境准备<br>
 1、在使用Gridea之前，请确保你拥有一个完全通畅的网络能访问GitHub，然后再开始下面的步骤。<br>
 2、首先从Gridea官网 下载适配你操作系统的版本。双击打开，安装。<br>
